@@ -133,6 +133,46 @@
     BOOL result3 = [str6 compare:str7] == NSOrderedDescending; //逆序：小写-》大写
     NSLog(@"result3:%d",result3);   //0
     
+    
+    //    九、比较两者是否相等  1代表true；0代表false
+    NSString *str8 = @"cccba";
+    NSString *str9 = @"cccba";
+    BOOL result4 = [str8 isEqualToString:str9];
+    NSLog(@"result4:%d",result4);     //1
+    
+    //    十、是否有该字符串头 hasPrefix
+    NSString *str10 = @"wangruiPerfect";
+    BOOL result5 = [str10 hasPrefix:@"wangrui"];
+    NSLog(@"result5:%d",result5);    //1
+    
+    //    十一、是否有该字符串尾 hasSuffix
+    BOOL result6 = [str10 hasSuffix:@"Perfect"];
+    NSLog(@"result6:%d",result6);    //1
+    
+    //    十二、将字符串都改成全部大写 uppercaseString
+    NSString *str11 = @"wangruiPerfect";
+    str11 = [str11 uppercaseString];
+    NSLog(@"str11:%@", str11);
+    
+    //    十三、将字符串都改成全部小写  lowercaseString
+    NSString *str12 = @"wangruiPerfect";
+    str12 = [str12 lowercaseString];
+    NSLog(@"str12:%@",str12);
+    
+    //    十四、首字母改成大写  capitalizedString
+    NSString *str13 = @"wangruiPerfect";
+    str13 = [str13 capitalizedString];
+    NSLog(@"str13:%@",str13);
+    
+    
+    //    十五、追加字符串
+    NSString *str14 = @"wangruiPerfect";
+    str14 = [str14 stringByAppendingString:@"abcxixixi"];
+    NSLog(@"str14:%@",str14);
+    
+    
+    
+    
 }
 
 
