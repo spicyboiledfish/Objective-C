@@ -54,8 +54,11 @@
     self.lblResult.text = [NSString stringWithFormat:@"%d",computeResult];
     
     //5. 把键盘叫回去，谁叫出来的键盘，就成为了“第一响应者”，再把键盘叫回去
-    [self.txtNum2 resignFirstResponder];
-    [self.txtNum1 resignFirstResponder];
+//    [self.txtNum2 resignFirstResponder];
+//    [self.txtNum1 resignFirstResponder];
+    
+    //6.第二种叫回去所有的键盘方法：
+    [self.view endEditing:YES];
     
 }
 @end
