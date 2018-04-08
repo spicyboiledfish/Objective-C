@@ -34,6 +34,7 @@
     CGRect originFrame = self.img.frame;
     
     //2. 表达式
+    
     switch (sender.tag) {
         case 1:
             //上：
