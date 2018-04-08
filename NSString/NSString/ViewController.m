@@ -160,12 +160,14 @@
     NSLog(@"str12:%@",str12);
     
     //    十四、首字母改成大写  capitalizedString
+    
     NSString *str13 = @"wangruiPerfect";
     str13 = [str13 capitalizedString];
     NSLog(@"str13:%@",str13);
     
     
     //    十五、追加字符串
+    
     NSString *str14 = @"wangruiPerfect";
     str14 = [str14 stringByAppendingString:@"abcxixixi"];
     NSLog(@"str14:%@",str14);
