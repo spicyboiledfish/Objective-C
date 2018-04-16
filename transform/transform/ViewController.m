@@ -51,6 +51,7 @@
 - (IBAction)move {
     self.button.transform = CGAffineTransformTranslate(self.button.transform, 0, 10);
     
+    
 }
 
 - (IBAction)rotate {
