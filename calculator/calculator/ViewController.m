@@ -42,6 +42,26 @@
     NSString *num1 = self.txtNum1.text;
     NSString *num2 = self.txtNum2.text;
     
+    //判断输入框的值是否为空，并且给出alert提示
+    if(num1.length == 0){
+        NSLog(@"请输入第一个数");
+        //添加alert
+//        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"输入有误" message:@"请输入第一个数" delegate:nil cancelButtonTitle:@"我知道了" otherButtonTitles:nil, nil];
+//        [alertView show];
+        
+        [self showAlert:@"请输入第一个数"];
+        return;
+    }
+    
+    if(num2.length == 0){
+        NSLog(@"请输入第二个数");
+//        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"输入有误" message:@"请输入第一个数" delegate:nil cancelButtonTitle:@"我知道了" otherButtonTitles:nil, nil];
+//        [alertView show];
+        
+        [self showAlert:@"请输入第二个数"];
+        return;
+    }
+    
     //2. 将字符串类型转换成整数类型
     int n1 = num1.intValue;
     int n2 = [num2 intValue];
@@ -61,4 +81,11 @@
     [self.view endEditing:YES];
     
 }
+
+- (void) showAlert :(NSString *)info{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"输入有误" message:info delegate:nil cancelButtonTitle:@"我知道了" otherButtonTitles:nil, nil];
+    [alertView show];
+}
+
+
 @end
