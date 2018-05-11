@@ -18,12 +18,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     UIToolbar *toolBar = [[UIToolbar alloc] init];
-    self.bgImageView.frame = toolBar.bounds;
-    [self.bgImageView addSubview:toolBar];
     toolBar.barStyle = UIBarStyleBlack;
-    toolBar.alpha = 0.5;
-    
+    toolBar.alpha = 0.9;
+    self.bgImageView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    toolBar.frame = self.bgImageView.frame;
+    [self.bgImageView addSubview:toolBar];
+
 }
 
+- (IBAction)play:(id)sender {
+    
+}
 
 @end
