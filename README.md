@@ -11,7 +11,7 @@ iOS原生开发语言Objective-C。从0到1开始的demos。
 多余的连线没有删除（创建了多余的IBOutlet）
 
 ## 5.9 UILabel和UIImageView：
-* UIKit中的常见控件：
+### UIKit中的常见控件：
 * UILable 文本
 * UIButton 按钮
 * UIImageView 图片
@@ -33,3 +33,35 @@ iOS原生开发语言Objective-C。从0到1开始的demos。
 * UIDatePicker 日期选择器
 * UIToolbar 工具条
 * UINavigationBar 导航条
+
+### UILable的属性：
+frame, backgroundColor, text, textColor,textAlignment, font, shadowColor, shadowOffset, lineBreakMode, numberOfLines
+
+### UIImageView的属性：
+frame, backgroundColor, image, contentMode, clipsToBounds (默认是false,不裁剪)
+
+### contentMode属性：
+* Scale to Fill 拉伸至全屏，图片会变形但没有空白（Redraw）UIViewContentModeScaleToFill
+* Aspect Fit 维持原有图片比例大小，会出现空白   UIViewContentModeScaleAspectFit （以高度为基准进行比例适配，然后居中显示）
+* Aspect Fill 在维持原有图片比例大小的基础上，去填充整个imageView大小，会有截断  UIViewContentModeScaleAcpectFill 
+（当图片的本身高度或者宽度等于实际的框框大小中的宽度或者高度，就会停止这个比例适配，直接显示被截断的图片）
+* Top 将图片的顶部显示出来
+* Center 将图片的中间部分显示出来
+* Bottom 将图片的下半部分显示出来
+* Left/Right 以此类推
+
+## 5.11 UIImageView纯代码中写法：
+### UIImageView如何设置frame的四种方式 
+CGRectMake UIImage initWith initWithImage
+
+### 如何加载UIImageView中的图片资源的两种方式
+imageNamed; imageWithContentsOfFile
+
+### UIImageView中的路径
+po NSHomeDirectory() 终端查看资源包内容
+[NSBundle mainBundle] 这就是进到了ipa的资源包里 NSString类型
+
+
+
+
+
